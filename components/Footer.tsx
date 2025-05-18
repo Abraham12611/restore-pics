@@ -22,17 +22,17 @@ export default function Footer() {
         </a>
         . Created by{' '}
         <a
-          href='https://www.twitter.com/nutlope'
+          href='https://www.twitter.com/abrahamdahunsi_'
           target='_blank'
           className='font-bold transition hover:text-black/50'
         >
-          Hassan
+          Abraham
         </a>{' '}
-        (hassan@hey.com).
+        (thearmediagroup@gmail.com).
       </div>
       <div className='flex space-x-4 pb-4 sm:pb-0'>
         <Link
-          href='https://twitter.com/nutlope'
+          href='https://twitter.com/abrahamdahunsi_'
           className='group'
           aria-label='TaxPal on Twitter'
         >
@@ -44,7 +44,7 @@ export default function Footer() {
           </svg>
         </Link>
         <Link
-          href='https://github.com/Nutlope/restorePhotos'
+          href='https://github.com/Abraham12611'
           className='group'
           aria-label='TaxPal on GitHub'
         >
