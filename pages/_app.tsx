@@ -1,15 +1,15 @@
 import type { AppProps } from 'next/app';
-import { SessionProvider } from 'next-auth/react';
+import { ClerkProvider } from '@clerk/nextjs';
 import '../styles/globals.css';
 import PlausibleProvider from 'next-plausible';
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <SessionProvider session={session}>
+    <ClerkProvider {...pageProps}>
       <PlausibleProvider domain='restorephotos.io'>
         <Component {...pageProps} />
       </PlausibleProvider>
-    </SessionProvider>
+    </ClerkProvider>
   );
 }
 
