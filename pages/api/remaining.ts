@@ -1,36 +1,62 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import redis from '../../utils/redis';
-import { getServerSession } from 'next-auth/next';
-import { authOptions } from './auth/[...nextauth]';
+import { getAuth } from '@clerk/nextjs/server';
+import { createClerkClient } from '@clerk/nextjs/server';
+import { prisma } from '../../lib/prismadb';
+
+type Data = {
+  credits: number;
+} | string;
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse<Data>
 ) {
   // Check if user is logged in
-  const session = await getServerSession(req, res, authOptions);
-  if (!session || !session.user) {
-    return res.status(500).json('Login to upload.');
+  const { userId } = getAuth(req);
+  if (!userId) {
+    return res.status(401).json('Login to upload.');
   }
 
-  // Query the redis database by email to get the number of generations left
-  const identifier = session.user.email;
-  const windowDuration = 24 * 60 * 60 * 1000;
-  const bucket = Math.floor(Date.now() / windowDuration);
+  try {
+    // Create a Clerk client instance
+    const clerk = createClerkClient({
+      secretKey: process.env.CLERK_SECRET_KEY
+    });
 
-  const usedGenerations =
-    (await redis?.get(`@upstash/ratelimit:${identifier!}:${bucket}`)) || 0;
+    // Add check for clerk object
+    if (!clerk) {
+      console.error('Clerk client failed to initialize.');
+      return res.status(500).json('Internal server error: Clerk client initialization failed.');
+    }
 
-  // it can return null and it also returns the number of generations the user has done, not the number they have left
+    // Get user's primary email address
+    const user = await clerk.users.getUser(userId);
+    const primaryEmail = user.emailAddresses.find((email: { id: string; emailAddress: string }) =>
+      email.id === user.primaryEmailAddressId)?.emailAddress;
 
-  // TODO: Move this using date-fns on the client-side
-  const resetDate = new Date();
-  resetDate.setHours(19, 0, 0, 0);
-  const diff = Math.abs(resetDate.getTime() - new Date().getTime());
-  const hours = Math.floor(diff / 1000 / 60 / 60);
-  const minutes = Math.floor(diff / 1000 / 60) - hours * 60;
+    if (!primaryEmail) {
+      return res.status(500).json('Could not find user email.');
+    }
 
-  const remainingGenerations = 2 - Number(usedGenerations);
+    // Get user's credits from database
+    const dbUser = await prisma.user.findUnique({
+      where: { email: primaryEmail },
+      select: { credits: true },
+    });
 
-  return res.status(200).json({ remainingGenerations, hours, minutes });
+    return res.status(200).json({
+      credits: dbUser?.credits ?? 0
+    });
+  } catch (error) {
+    console.error('Error in handler:', error);
+    if (error.clerkError && error.errors) {
+      console.error('Clerk error details:', {
+        errors: error.errors,
+        status: error.status,
+        clerkTraceId: error.clerkTraceId,
+        retryAfter: error.retryAfter
+      });
+    }
+    return res.status(500).json('Internal server error.');
+  }
 }
