@@ -6,7 +6,7 @@ import "../styles/globals.css"; // Adjust path if your globals.css is elsewhere
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Restore Photos AI", // You can change this to your app's title
+  title: "Restore Photos AI", // Youcan change this to your app's title
   description: "Restore your old photos with AI", // You can change this
 };
 
