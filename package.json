@@ -5,7 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "vercel-build": "npm install --legacy-peer-deps && npm install --save-dev @types/react && npx prisma generate && next build",
+    "vercel-build": "npm install --legacy-peer-deps && npx prisma generate && next build",
     "prisma:generate": "prisma generate"
   },
   "dependencies": {
@@ -25,7 +25,7 @@
     "axios": "^1.9.0",
     "install": "^0.13.0",
     "micro": "^10.0.1",
-    "next": "^15.3.2",
+    "next": "14.1.0",
     "next-plausible": "^3.11.3",
     "nsfw-filter": "^1.0.4",
     "nsfwjs": "^2.4.2",

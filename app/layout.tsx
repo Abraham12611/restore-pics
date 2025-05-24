@@ -10,19 +10,19 @@ export const metadata: Metadata = {
   description: "Restore your old photos with AI", // You can change this
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
+    <html lang="en">
+      <body className={inter.className}>
+        <ClerkProvider>
           {/* You can add a header here with SignedIn, SignedOut, UserButton, etc. */}
           {children}
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }
