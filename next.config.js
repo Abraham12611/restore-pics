@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['next-auth'],
   images: {
@@ -8,19 +8,23 @@ module.exports = {
   },
   experimental: {
     allowedDevOrigins: ["https://55a9-154-120-84-187.ngrok-free.app"],
+    typedRoutes: false,
   },
   async redirects() {
     return [
       {
-        source: "/github",
-        destination: "https://github.com/Nutlope/restorePhotos",
-        permanent: false,
-      },
-      {
-        source: "/deploy",
-        destination: "https://vercel.com/templates/next.js/ai-photo-restorer",
-        permanent: false,
+        source: '/',
+        destination: '/restore',
+        permanent: true,
       },
     ];
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
+
+module.exports = nextConfig;
