@@ -9,7 +9,7 @@ const pricingPlans = [
   {
     id: 'basic',
     name: 'Basic Plan',
-    price: '$5',
+    price: '$8.34',
     credits: '35 credits',
     features: [
       '35 photo restores',
@@ -19,7 +19,7 @@ const pricingPlans = [
   {
     id: 'popular',
     name: 'Popular Plan',
-    price: '$10',
+    price: '$16.67',
     credits: '75 credits',
     features: [
       '75 photo restores',
@@ -29,7 +29,7 @@ const pricingPlans = [
   {
     id: 'pro',
     name: 'Pro Plan',
-    price: '$20',
+    price: '$33.34',
     credits: '150 credits',
     features: [
       '150 photo restores',
@@ -74,7 +74,7 @@ export default function PricingPage() {
       <Header />
       <div className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 text-center">
         <p className="text-sm font-medium">
-          <span className="font-bold">Start strong with 40% off</span> your first order. Use code <span className="font-bold">GHU663</span> today!
+          <span className="font-bold">Start strong with 40% off</span> your first order. Use code <span className="font-bold">NCQAD772</span> today!
         </p>
       </div>
       <main className="flex flex-1 flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">

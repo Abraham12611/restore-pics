@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Header />
       <div className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 text-center">
         <p className="text-sm font-medium">
-          <span className="font-bold">Start strong with 40% off</span> your first order. Use code <span className="font-bold">GHU663</span> today!
+          <span className="font-bold">Start strong with 40% off</span> your first order. Use code <span className="font-bold">NCQAD772</span> today!
         </p>
       </div>
       <main className='flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20'>
