@@ -5,7 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "vercel-build": "npm install --legacy-peer-deps && npx prisma generate && next build",
+    "vercel-build": "PRISMA_CLIENT_ENGINE_TYPE=dataproxy PRISMA_CLI_QUERY_ENGINE_TYPE=dataproxy npm install --legacy-peer-deps && npx prisma generate && next build",
     "prisma:generate": "prisma generate"
   },
   "dependencies": {
