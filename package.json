@@ -5,7 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "vercel-build": "npm install --legacy-peer-deps && npx prisma generate && next build",
+    "vercel-build": "npm install --legacy-peer-deps && npm install --save-dev @types/react && npx prisma generate && next build",
     "prisma:generate": "prisma generate"
   },
   "dependencies": {
@@ -17,6 +17,8 @@
     "@polar-sh/sdk": "^0.32.15",
     "@prisma/client": "^4.11.0",
     "@tensorflow/tfjs": "^3.21.0",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.2.0",
     "@upstash/ratelimit": "^0.3.10",
     "@upstash/redis": "^1.19.1",
     "autoprefixer": "^10.4.12",
@@ -43,8 +45,6 @@
   },
   "devDependencies": {
     "@types/node": "18.11.3",
-    "@types/react": "18.3.12",
-    "@types/react-dom": "18.2.0",
     "@types/request-ip": "^0.0.37",
     "prisma": "^4.11.0"
   }
