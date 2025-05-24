@@ -4,66 +4,66 @@ const testimonials = [
   [
     {
       content:
-        "Just had early access to this and it's *ridic*. Powered by @vercel x @replicatehq – also very fast.",
-      link: 'https://twitter.com/rauchg/status/1612233034622984192',
+        "Many thanks for restoring my 50-year-old family photo. The result exceeded my expectations. Other services couldn't help, but Restore Pics worked magic on it. My family is thrilled with the result!",
+      link: '#',
       author: {
-        name: 'Guillermo Rauch',
-        role: 'CEO at Vercel',
-        image: '/g.jpg',
+        name: 'Sarah Mitchell',
+        role: 'User',
+        image: '/sm.jpg',
       },
     },
     {
       content:
-        'This is amazing! And in the 🧵 you can see the whole open-source stack instantly deployable to Vercel',
-      link: 'https://twitter.com/cramforce/status/1612496954218672128',
+        "I can't believe how well you restored my damaged wedding photo! Not only did you fix all the tears and creases, but you even reconstructed missing parts. The final result is better than the original. Excellent service!",
+      link: '#',
       author: {
-        name: 'Malte Ubl',
-        role: 'CTO at Vercel',
-        image: '/malte.jpg',
-      },
-    },
-  ],
-  [
-    {
-      content:
-        'I just used it and am extremely impressed with the website and wanted to express my appreciation for the excellent design and functionality. Keep up the great work!',
-      link: 'https://twitter.com/phar_whaz/status/1612498030627852309',
-      author: {
-        name: 'Fawaz Adeniji',
-        role: 'Software Engineer',
-        image: '/fawaz.jpg',
-      },
-    },
-    {
-      content:
-        'Turning blurred photos into perfectly sharp ones. Works like magic',
-      link: 'https://twitter.com/sergvind/status/1612610058369515521',
-      author: {
-        name: 'Sergei Vinderskikh',
-        role: 'CPO at Treeum',
-        image: '/sergei.jpg',
+        name: 'Emma Thompson',
+        role: 'User',
+        image: '/EW.jpg',
       },
     },
   ],
   [
     {
       content:
-        "I've just used it and damn I'll keep coming back! This is so good. Great work!",
-      link: 'https://twitter.com/Himanil_Gole/status/1612510385504157697',
+        "Everyone said my photo was beyond repair, but Restore Pics was willing to try. The result was amazing! Very affordable and they even sent me multiple copies. I'll recommend them to everyone!",
+      link: '#',
       author: {
-        name: 'Himanil Gole',
-        role: 'Designer & Founder at CBREX',
-        image: '/himanil.jpg',
+        name: 'Michael Chen',
+        role: 'User',
+        image: '/mc.jpg',
       },
     },
     {
       content:
-        'Wow, thank you! Tried a few and love it! My small example (pic of father from 70s original on right), really cleaned it up!',
-      link: 'https://twitter.com/rod_ellison/status/1612513333302775809',
+        "The service was professional, reasonably priced, and incredibly fast. We thought our picture was beyond saving, but it was restored almost to perfection. Wonderful to deal with!",
+      link: '#',
       author: {
-        name: 'Rod Ellison',
-        role: 'Software Engineer',
-        image: '/rod.jpg',
+        name: 'Lisa Rodriguez',
+        role: 'User',
+        image: '/LS.jpg',
+      },
+    },
+  ],
+  [
+    {
+      content:
+        "I was amazed at the quality of work! Got a quote within 24 hours and the restoration was complete in just a few days. The only baby picture I had of my father is now beautifully restored. Thank you!",
+      link: '#',
+      author: {
+        name: 'David Wilson',
+        role: 'User',
+        image: '/dw.png',
+      },
+    },
+    {
+      content:
+        "Restore Pics did an awesome job with my photo restoration. Their prices are reasonable and the service is super fast! I had proofs to examine in less than 24 hours. Would definitely recommend!",
+      link: '#',
+      author: {
+        name: 'Jennifer Park',
+        role: 'User',
+        image: '/jp.webp',
       },
     },
   ],
@@ -82,7 +82,7 @@ export function Testimonials() {
             Loved by many worldwide.
           </h1>
           <p className='mx-auto mt-6 max-w-xl text-lg text-slate-700 leading-7'>
-            See what our 300,000+ users are saying about the product.
+            See what our 5,000+ users are saying about the product.
           </p>
         </div>
         <ul
