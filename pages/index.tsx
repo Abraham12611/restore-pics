@@ -14,6 +14,11 @@ const Home: NextPage = () => {
         <title>Face Photo Restorer</title>
       </Head>
       <Header />
+      <div className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 text-center">
+        <p className="text-sm font-medium">
+          <span className="font-bold">Start strong with 40% off</span> your first order. Use code <span className="font-bold">GHU663</span> today!
+        </p>
+      </div>
       <main className='flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-20'>
         <a
           href='https://twitter.com/nutlope/status/1704894145003741611'
@@ -21,7 +26,7 @@ const Home: NextPage = () => {
           rel='noreferrer'
           className='border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out'
         >
-          Used by over <span className='font-semibold'>470,000</span> happy
+          Used by over <span className='font-semibold'>5,439</span> happy
           users
         </a>
         <h1 className='mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl'>
@@ -35,16 +40,16 @@ const Home: NextPage = () => {
 
         <p className='mx-auto mt-12 max-w-xl text-lg text-slate-700 leading-7'>
           Have old and blurry face photos? Let our AI restore them so those
-          memories can live on. 100% free – restore your photos today.
+          memories can live on. Restore your photos today.
         </p>
         <div className='flex justify-center space-x-4'>
           <a
             className='bg-white rounded-xl text-black font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-gray-100 border'
-            href='https://www.roomgpt.io/'
+            href='/pricing'
             target='_blank'
             rel='noreferrer'
           >
-            Check out roomGPT
+            Coming Soon!
           </a>
 
           <Link
@@ -61,7 +66,7 @@ const Home: NextPage = () => {
                 <h2 className='mb-1 font-medium text-lg'>Original Photo</h2>
                 <Image
                   alt='Original photo of my bro'
-                  src='/michael.jpg'
+                  src='/007-before.png'
                   className='w-96 h-96 rounded-2xl'
                   width={400}
                   height={400}
@@ -73,7 +78,7 @@ const Home: NextPage = () => {
                   alt='Restored photo of my bro'
                   width={400}
                   height={400}
-                  src='/michael-new.jpg'
+                  src='/007-after.png'
                   className='w-96 h-96 rounded-2xl sm:mt-0 mt-2'
                 />
               </div>
