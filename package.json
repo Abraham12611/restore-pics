@@ -5,8 +5,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "vercel-build": "npm install --legacy-peer-deps && npx prisma generate && next build",
-    "prisma:generate": "prisma generate"
+    "vercel-build": "npm install --legacy-peer-deps && prisma generate && next build",
+    "prisma:generate": "prisma generate",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@bytescale/upload-widget-react": "^4.9.0",
