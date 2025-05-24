@@ -15,7 +15,7 @@
     "@headlessui/react": "^1.7.7",
     "@polar-sh/nextjs": "^0.4.0",
     "@polar-sh/sdk": "^0.32.15",
-    "@prisma/client": "^4.11.0",
+    "@prisma/client": "4.16.2",
     "@tensorflow/tfjs": "^3.21.0",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
@@ -46,7 +46,7 @@
   "devDependencies": {
     "@types/node": "18.11.3",
     "@types/request-ip": "^0.0.37",
-    "prisma": "^4.11.0"
+    "prisma": "4.16.2"
   },
   "overrides": {
     "react": "18.2.0",
