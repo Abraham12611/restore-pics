@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Restore your old photos with AI", // You can change this
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
