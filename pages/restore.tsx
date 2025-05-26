@@ -139,17 +139,17 @@ const Home: NextPage = () => {
       <main className='flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8'>
         <a
           className='border shadow-xl flex max-w-md rounded-xl mb-6 hover:scale-[1.02] transition duration-300 ease-in-out'
-          href='https://www.roomgpt.io/'
+          href='/'
           target='_blank'
         >
           <div className="relative w-full">
             <img
-              src='/roomgpt-ad.png'
-              alt='roomgpt ad'
+              src='/new-ai.png'
+              alt='new feature ad'
               className='w-full rounded-lg filter brightness-10'
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white text-center text-xl font-bold p-2">NEW AI FEATURE COMING SOON!</span>
+              	<span className="text-white text-center text-xl font-bold p-2">NEW AI FEATURE COMING SOON!</span>
             </div>
           </div>
         </a>
