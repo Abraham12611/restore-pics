@@ -146,7 +146,7 @@ const Home: NextPage = () => {
             <img
               src='/roomgpt-ad.png'
               alt='roomgpt ad'
-              className='w-full rounded-lg filter brightness-90'
+              className='w-full rounded-lg filter brightness-10'
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="text-white text-center text-xl font-bold p-2">NEW AI FEATURE COMING SOON!</span>
@@ -197,8 +197,7 @@ const Home: NextPage = () => {
               <div className='h-[250px] flex flex-col items-center space-y-6 max-w-[670px] -mt-8'>
                 <div className='max-w-xl text-gray-600'>
                   Sign in below with Google to create a free account and restore
-                  your photos today. You will be able to restore 2 photos per
-                  day for free.
+                  your photos today.
                 </div>
                 <SignInButton mode="modal">
                   <button
